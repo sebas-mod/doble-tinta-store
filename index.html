@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Doble Tinta | Ropa Deportiva</title>
+
+<link rel="stylesheet" href="styles.css">
+
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">
+<img src="img/logo.png">
+<span>Doble Tinta</span>
+</div>
+
+<div class="menu-btn" id="menu-btn">
+<img src="img/menu.png">
+</div>
+
+<nav id="menu">
+
+<a href="#">Inicio</a>
+<a href="#productos">Productos</a>
+<a href="#contacto">Contacto</a>
+
+</nav>
+
+</header>
+
+
+<section class="hero">
+
+<div class="hero-contenido">
+
+<div class="hero-texto">
+
+<h1>ROPA DEPORTIVA</h1>
+
+<p>Comodidad y estilo para tu día a día.</p>
+
+<a href="#productos" class="hero-boton">
+Ver productos
+</a>
+
+</div>
+
+<div class="hero-imagen">
+
+<img src="img/conjunto adidas.jpeg">
+
+</div>
+
+</div>
+
+</section>
+
+
+<section class="categorias">
+
+<h2>Categorías</h2>
+
+<div class="filtros">
+
+<button onclick="filtrar('todos')">Todos</button>
+<button onclick="filtrar('conjunto')">Conjunto</button>
+<button onclick="filtrar('pantalon')">Pantalon</button>
+<button onclick="filtrar('palazo')">Palazo</button>
+<button onclick="filtrar('gorra')">Gorra</button>
+<button onclick="filtrar('remera')">remera</button>
+<button onclick="filtrar('buzo')">buzo</button>
+<button onclick="filtrar('shorts')">shorts</button>
+
+</div>
+
+</section>
+
+
+<section id="productos">
+
+<div class="galeria">
+
+<!-- Firebase carga los productos acá -->
+
+</div>
+
+</section>
+
+
+<section id="contacto" class="contacto">
+
+<h2>Contacto</h2>
+
+<p>Escríbenos o síguenos en nuestras redes</p>
+
+<div class="redes">
+
+<a href="https://instagram.com/dobletinta.ok">Instagram</a>
+
+<a href="https://wa.me/5491166695180">WhatsApp</a>
+
+</div>
+
+</section>
+
+
+<footer class="footer">
+
+<h3>Doble Tinta</h3>
+
+<p>Ropa deportiva con estilo.</p>
+
+<p>
+<a href="#">Inicio</a>
+<a href="#productos">Productos</a>
+<a href="#contacto">Contacto</a>
+</p>
+
+<p>
+<a href="https://instagram.com/dobletinta.ok">Instagram</a>
+<a href="https://wa.me/5491166695180">WhatsApp</a>
+</p>
+
+<p>© 2026 Doble Tinta</p>
+
+</footer>
+
+
+<div id="modal" class="modal">
+<img id="imagen-grande">
+</div>
+
+
+<a href="https://wa.me/5491166695180" class="whatsapp">
+<img src="img/logo wsp.png">
+</a>
+
+
+<script type="module" src="script.js"></script>
+
+</body>
+</html>
