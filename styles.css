@@ -1,5 +1,9 @@
 /* ================= RESET ================= */
 
+*{
+box-sizing:border-box;
+}
+
 body{
 margin:0;
 font-family:Arial, sans-serif;
@@ -49,7 +53,7 @@ font-weight:700;
 letter-spacing:2px;
 }
 
-/* MENU DESKTOP */
+/* ================= MENU DESKTOP ================= */
 
 .menu{
 display:flex;
@@ -65,14 +69,6 @@ position:relative;
 transition:0.3s;
 }
 
-@media(min-width:768px){
-.galeria{
-grid-template-columns:repeat(3, 1fr);
-gap:25px;
-max-width:1200px;
-margin:auto;
-}
-}
 /* HOVER */
 
 .menu a::after{
@@ -104,19 +100,13 @@ display:none;
 position:absolute;
 right:25px;
 top:25px;
+display:none;
+cursor:pointer;
+z-index:3000;
+}
 
 .menu-icono img{
 width:30px;
-}
-
-  .menu a{
-padding:12px 5px;
-border-bottom:1px solid rgba(255,255,255,0.1);
-font-size:16px;
-}
-
-.menu a:last-child{
-border-bottom:none;
 }
 
 /* ================= HERO ================= */
@@ -145,7 +135,7 @@ position:relative;
 z-index:2;
 }
 
-/* 🔥 TITULO PRO STREET */
+/* TITULO */
 
 .hero h1{
 font-family:'Bebas Neue', sans-serif;
@@ -224,22 +214,37 @@ padding:60px 20px;
 text-align:center;
 }
 
+/* 🔥 GALERIA ARREGLADA */
+
 .galeria{
 display:grid;
-grid-template-columns:repeat(2, 1fr); /* 🔥 SIEMPRE 2 EN CELULAR */
+grid-template-columns:repeat(2, 1fr);
 gap:15px;
-padding:0 15px;
+padding:0 10px;
 }
 
-/* TARJETA PRO */
+/* PC */
+
+@media(min-width:768px){
+.galeria{
+grid-template-columns:repeat(3, 1fr);
+max-width:1200px;
+margin:auto;
+gap:25px;
+}
+}
+
+/* TARJETA */
 
 .producto{
+width:100%;
 background:#111;
 border-radius:12px;
 padding:10px;
 text-align:center;
 transition:0.3s;
 box-shadow:0 5px 20px rgba(0,0,0,0.5);
+overflow:hidden;
 }
 
 .producto:hover{
@@ -269,7 +274,7 @@ font-size:18px;
 letter-spacing:1px;
 }
 
-/* BOTON WHATSAPP */
+/* BOTON */
 
 .comprar{
 display:block;
@@ -357,12 +362,22 @@ border-radius:12px;
 
 min-width:180px;
 
-/* 🔥 estilo premium */
 box-shadow:0 10px 30px rgba(0,0,0,0.7);
 border:1px solid rgba(255,255,255,0.08);
 }
+
 #menu-toggle:checked ~ .menu{
 display:flex;
+}
+
+.menu a{
+padding:12px 5px;
+border-bottom:1px solid rgba(255,255,255,0.1);
+font-size:16px;
+}
+
+.menu a:last-child{
+border-bottom:none;
 }
 
 .menu-icono{
