@@ -94,13 +94,21 @@ display:none;
 
 .menu-icono{
 position:absolute;
-right:20px;
-display:none;
-cursor:pointer;
-}
+right:25px;
+top:25px;
 
 .menu-icono img{
 width:30px;
+}
+
+  .menu a{
+padding:12px 5px;
+border-bottom:1px solid rgba(255,255,255,0.1);
+font-size:16px;
+}
+
+.menu a:last-child{
+border-bottom:none;
 }
 
 /* ================= HERO ================= */
@@ -330,14 +338,22 @@ width:60px;
 .menu{
 display:none;
 position:absolute;
-top:80px;
-right:20px;
-background:#111;
-flex-direction:column;
-padding:20px;
-border-radius:10px;
-}
+top:90px;
+right:15px;
 
+background:rgba(0,0,0,0.95);
+backdrop-filter:blur(10px);
+
+flex-direction:column;
+padding:25px 20px;
+border-radius:12px;
+
+min-width:180px;
+
+/* 🔥 estilo premium */
+box-shadow:0 10px 30px rgba(0,0,0,0.7);
+border:1px solid rgba(255,255,255,0.08);
+}
 #menu-toggle:checked ~ .menu{
 display:flex;
 }
