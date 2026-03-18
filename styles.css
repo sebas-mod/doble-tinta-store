@@ -65,6 +65,14 @@ position:relative;
 transition:0.3s;
 }
 
+@media(min-width:768px){
+.galeria{
+grid-template-columns:repeat(3, 1fr);
+gap:25px;
+max-width:1200px;
+margin:auto;
+}
+}
 /* HOVER */
 
 .menu a::after{
@@ -218,10 +226,9 @@ text-align:center;
 
 .galeria{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-gap:25px;
-max-width:1200px;
-margin:auto;
+grid-template-columns:repeat(2, 1fr); /* 🔥 SIEMPRE 2 EN CELULAR */
+gap:15px;
+padding:0 15px;
 }
 
 /* TARJETA PRO */
