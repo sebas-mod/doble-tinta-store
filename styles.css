@@ -1,0 +1,353 @@
+/* ================= RESET ================= */
+
+body{
+margin:0;
+font-family:Arial, sans-serif;
+background:#000;
+color:white;
+padding-top:80px;
+}
+
+/* ================= HEADER ================= */
+
+.header{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:80px;
+display:flex;
+align-items:center;
+justify-content:center;
+gap:40px;
+padding:0 20px;
+z-index:2000;
+
+background:rgba(0,0,0,0.7);
+backdrop-filter:blur(10px);
+border-bottom:1px solid rgba(255,255,255,0.08);
+}
+
+/* LOGO */
+
+.logo{
+display:flex;
+align-items:center;
+gap:10px;
+}
+
+.logo img{
+width:35px;
+height:35px;
+object-fit:cover;
+border-radius:50%;
+}
+
+.logo span{
+font-size:18px;
+font-weight:700;
+letter-spacing:2px;
+}
+
+/* MENU DESKTOP */
+
+.menu{
+display:flex;
+gap:30px;
+}
+
+.menu a{
+color:#aaa;
+text-decoration:none;
+font-size:15px;
+letter-spacing:1px;
+position:relative;
+transition:0.3s;
+}
+
+/* HOVER */
+
+.menu a::after{
+content:"";
+position:absolute;
+bottom:-6px;
+left:0;
+width:0%;
+height:2px;
+background:#ff3c00;
+transition:0.3s;
+}
+
+.menu a:hover{
+color:white;
+}
+
+.menu a:hover::after{
+width:100%;
+}
+
+/* ================= MENU MOBILE ================= */
+
+#menu-toggle{
+display:none;
+}
+
+.menu-icono{
+position:absolute;
+right:20px;
+display:none;
+cursor:pointer;
+}
+
+.menu-icono img{
+width:30px;
+}
+
+/* ================= HERO ================= */
+
+.hero{
+height:calc(100vh - 80px);
+background:url("img/banner.jpeg") no-repeat;
+background-size:cover;
+background-position:center;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+position:relative;
+}
+
+.overlay{
+position:absolute;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.6);
+}
+
+.hero-texto{
+position:relative;
+z-index:2;
+}
+
+/* 🔥 TITULO PRO STREET */
+
+.hero h1{
+font-family:'Bebas Neue', sans-serif;
+font-size:90px;
+letter-spacing:6px;
+margin:0;
+text-transform:uppercase;
+
+background:linear-gradient(90deg,#ffffff,#bbbbbb);
+background-clip:text;
+-webkit-background-clip:text;
+
+color:transparent;
+-webkit-text-fill-color:transparent;
+
+text-shadow:0 5px 20px rgba(0,0,0,0.8);
+}
+
+/* SUBTEXTO */
+
+.hero p{
+color:#aaa;
+font-size:18px;
+letter-spacing:2px;
+margin:15px 0;
+text-transform:uppercase;
+}
+
+/* BOTON */
+
+.btn{
+background:#ff3c00;
+padding:12px 25px;
+color:white;
+text-decoration:none;
+border-radius:5px;
+transition:0.3s;
+}
+
+.btn:hover{
+background:#ff5a2c;
+}
+
+/* ================= CATEGORIAS ================= */
+
+.categorias{
+padding:60px 20px;
+text-align:center;
+}
+
+.filtros{
+display:flex;
+justify-content:center;
+gap:15px;
+flex-wrap:wrap;
+}
+
+.filtros button{
+background:#111;
+color:white;
+border:none;
+padding:10px 20px;
+border-radius:20px;
+cursor:pointer;
+transition:0.3s;
+}
+
+.filtros button:hover{
+background:#ff3c00;
+}
+
+/* ================= PRODUCTOS ================= */
+
+#productos{
+padding:60px 20px;
+text-align:center;
+}
+
+.galeria{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:25px;
+max-width:1200px;
+margin:auto;
+}
+
+/* TARJETA PRO */
+
+.producto{
+background:#111;
+border-radius:12px;
+padding:15px;
+text-align:center;
+transition:0.3s;
+box-shadow:0 5px 20px rgba(0,0,0,0.5);
+}
+
+.producto:hover{
+transform:translateY(-8px) scale(1.02);
+box-shadow:0 10px 30px rgba(0,0,0,0.8);
+}
+
+/* IMAGEN */
+
+.producto img{
+width:100%;
+height:220px;
+object-fit:cover;
+border-radius:10px;
+transition:0.3s;
+}
+
+.producto:hover img{
+transform:scale(1.05);
+}
+
+/* TITULO */
+
+.producto h3{
+margin:15px 0;
+font-size:18px;
+letter-spacing:1px;
+}
+
+/* BOTON WHATSAPP */
+
+.comprar{
+display:block;
+background:#25D366;
+color:white;
+padding:10px;
+border-radius:6px;
+text-decoration:none;
+transition:0.3s;
+}
+
+.comprar:hover{
+background:#1ebe5d;
+}
+
+/* ================= FOOTER ================= */
+
+.footer{
+text-align:center;
+padding:60px;
+background:#000;
+border-top:1px solid rgba(255,255,255,0.1);
+}
+
+.footer h2{
+letter-spacing:3px;
+margin-bottom:20px;
+}
+
+.redes-icons{
+display:flex;
+justify-content:center;
+gap:20px;
+margin:20px 0;
+}
+
+.redes-icons a{
+width:60px;
+height:60px;
+border:2px solid white;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+color:white;
+text-decoration:none;
+transition:0.3s;
+}
+
+.redes-icons a:hover{
+background:white;
+color:black;
+transform:scale(1.1);
+}
+
+/* ================= WHATSAPP ================= */
+
+.whatsapp{
+position:fixed;
+bottom:20px;
+right:20px;
+z-index:2000;
+}
+
+.whatsapp img{
+width:60px;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width:768px){
+
+.menu{
+display:none;
+position:absolute;
+top:80px;
+right:20px;
+background:#111;
+flex-direction:column;
+padding:20px;
+border-radius:10px;
+}
+
+#menu-toggle:checked ~ .menu{
+display:flex;
+}
+
+.menu-icono{
+display:block;
+}
+
+.hero h1{
+font-size:50px;
+}
+
+}
